@@ -2,8 +2,8 @@ const mysql = require('mysql');
 
 module.exports = mysql.createConnection({
   host: 'localhost',
-  port: '3307',
+  port: '3308',
   user: 'root',
   password: 'root',
-  database: 'tic',
+  database: 'tic_test',
 });

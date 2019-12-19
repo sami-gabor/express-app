@@ -10,6 +10,8 @@ app.get('/', (req, res) => {
 
 app.get('/users', (req, res) => {
   db.getUsers((err, result) => {
+    console.log(result);
+    
     res.json(result);
   });
 });
