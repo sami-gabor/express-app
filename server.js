@@ -5,14 +5,15 @@ const app = express();
 
 
 app.get('/', (req, res) => {
-  res.send('Express server works!');
+  const msg = 'Express server works!';
+  res.json({ msg });
 });
 
 app.get('/users', (req, res) => {
   db.getUsers((err, result) => {
     console.log(result);
-    
-    res.json({'result': 'Got this: ', result});
+    const msg = 'Got this:'
+    res.json({ msg, result});
   });
 });
 

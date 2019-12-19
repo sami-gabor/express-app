@@ -6,7 +6,7 @@ cd basic-image
 ###### Express App
 ```
 docker image build -t simple-express-app .
-docker container run -p 3003:3003 simple-express-app
+docker container run -p 3003:3003 -d simple-express-app
 ```
 
 ###### MYSQL
