@@ -7,17 +7,17 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.get('/', (req, res) => {
-  const msg = 'Express server works!!!';
+  const msg = 'Express server works!';
   res.json({ msg });
 });
 
 app.get('/users', (req, res) => {
   db.getUsers((err, result) => {
-    console.log(result);
+    console.log(err, result);
     const msg = 'Got this:'
     res.json({ msg, result});
   });
 });
 
 
-app.listen(3003);
+app.listen(3010);
